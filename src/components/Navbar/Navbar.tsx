@@ -1,18 +1,28 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import Link from "next/link";
-import { FaTimes, FaBars } from "react-icons/fa";
+import { FaTimes, FaBars, FaLaptopCode } from "react-icons/fa";
 import { Sidebar } from "../Sidebar";
 import { navLinks } from "@/data";
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) {
+        setIsOpen(false);
+      }
+    });
+  }, []);
+
   return (
     <header className="shadow-xl px-4 md:px-0">
       <nav className="flex h-24 justify-between items-center container mx-auto">
         <div>
           <Link href="/">
-            <h2 className="text-2xl">Indranil Halder</h2>
+            <h2 className="transition-all duration-300 text-blue-500 hover:text-white">
+              <FaLaptopCode size={34} />
+            </h2>
           </Link>
         </div>
 
