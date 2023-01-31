@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 section {
   @apply min-h-[80vh];
 }
+
+/* width */
+::-webkit-scrollbar {
+  @apply w-[10px] bg-transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-900;
+} */
