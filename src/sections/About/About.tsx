@@ -7,7 +7,7 @@ const About: FC = () => {
     <section id="about" className="flex flex-col justify-center">
       <Heading>About Me</Heading>
 
-      <div className="flex flex-col md:flex-row gap-4 items-center mt-10">
+      <div className="flex flex-col md:flex-row gap-4 items-center mt-8">
         <div className="w-full md:w-4/5 flex flex-col gap-6">
           <p className="text-base md:text-lg text-gray-400">
             Hello My name is Indranil Halder and I enjoy building full stack web
@@ -35,7 +35,7 @@ const About: FC = () => {
           <Image
             width={300}
             height={100}
-            className="rounded-md"
+            className="rounded-md shadow-lg"
             src="/about.jpg"
             alt="logo"
           />
