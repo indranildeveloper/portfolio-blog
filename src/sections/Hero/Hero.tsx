@@ -20,7 +20,9 @@ const Hero: FC = () => {
         </p>
 
         <div className="mt-10 flex gap-4">
-          <Button link="/">Resume</Button>
+          <Button link="/resume.pdf" newPage>
+            Resume
+          </Button>
           <Button link="#contact">Contact Me</Button>
         </div>
       </div>
