@@ -1,4 +1,4 @@
 const ProjectsGrid = () => {
-  return <div>ProjectsGrid</div>;
+    return <div>ProjectsGrid</div>;
 };
 export default ProjectsGrid;

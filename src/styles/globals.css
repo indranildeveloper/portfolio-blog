@@ -10,6 +10,16 @@ section {
   @apply min-h-[80vh];
 }
 
+.vertical-timeline.vertical-timeline--two-columns {
+  width: 100% !important;
+}
+
+.vertical-timeline--two-columns
+  .vertical-timeline-element-content
+  .vertical-timeline-element-date {
+  margin-left: 0.6rem;
+}
+
 /* width */
 ::-webkit-scrollbar {
   @apply w-[10px] bg-transparent;
