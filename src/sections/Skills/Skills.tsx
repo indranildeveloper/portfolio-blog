@@ -22,7 +22,12 @@ import {
 } from "react-icons/si";
 import { Heading } from "@/components/Heading";
 
-const skillItems = [
+interface SkillItemType {
+    id: string;
+    icon: JSX.Element;
+}
+
+const skillItems: Array<SkillItemType> = [
     {
         id: uuidv4(),
         icon: <FaReact />,

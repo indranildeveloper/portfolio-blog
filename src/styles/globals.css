@@ -1,38 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 section {
-  @apply min-h-[80vh];
+    @apply min-h-[80vh];
 }
 
 .vertical-timeline.vertical-timeline--two-columns {
-  width: 100% !important;
+    width: 100% !important;
 }
 
 .vertical-timeline--two-columns
-  .vertical-timeline-element-content
-  .vertical-timeline-element-date {
-  margin-left: 0.6rem;
+    .vertical-timeline-element-content
+    .vertical-timeline-element-date {
+    margin-left: 0.6rem;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  @apply w-[10px] bg-transparent;
+    @apply w-[10px] bg-transparent;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-gray-900;
+    @apply bg-gray-900;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-700 rounded-full;
+    @apply bg-gray-700 rounded-full;
 }
 
 /* Handle on hover */
