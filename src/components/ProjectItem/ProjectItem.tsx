@@ -13,7 +13,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ right }) => {
                 right ? "md:flex-row" : "md:flex-row-reverse"
             }  gap-8 p-8 rounded-md bg-gray-800 mb-8 shadow-xl`}
         >
-            <div className={`${right && "text-right"} flex-1`}>
+            <div className={`text-left ${right && "md:text-right"} flex-1`}>
                 <p className="text-sm md:text-base text-blue-500">
                     Featured Project
                 </p>
@@ -28,11 +28,10 @@ const ProjectItem: FC<ProjectItemProps> = ({ right }) => {
                     provident maiores natus?
                 </p>
                 <ul
-                    className={`flex items-center gap-4 flex-wrap my-4 ${
-                        right && "justify-end"
+                    className={`flex items-center gap-4 flex-wrap my-4 justify-start ${
+                        right && "md:justify-end"
                     }`}
                 >
-                    {/* TODO: Add different colors for different texh */}
                     <li className="px-3 py-1 rounded-md bg-blue-600">React</li>
                     <li className="px-3 py-1 rounded-md bg-blue-600">NodeJS</li>
                     <li className="px-3 py-1 rounded-md bg-blue-600">
@@ -42,8 +41,8 @@ const ProjectItem: FC<ProjectItemProps> = ({ right }) => {
                 </ul>
 
                 <div
-                    className={`links flex gap-6 mt-6 ${
-                        right && "justify-end"
+                    className={`links flex gap-6 mt-6 justify-start ${
+                        right && "md:justify-end"
                     }`}
                 >
                     <a
