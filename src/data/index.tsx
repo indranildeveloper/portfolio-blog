@@ -21,8 +21,8 @@ export const navLinks = [
     },
     {
         id: uuidv4(),
-        title: "Skills",
-        link: "#Skills",
+        title: "skills",
+        link: "#skills",
     },
     {
         id: uuidv4(),

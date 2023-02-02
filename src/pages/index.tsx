@@ -5,6 +5,7 @@ import { About } from "@/sections/About";
 import { Experience } from "@/sections/Experience";
 import { Skills } from "@/sections/Skills";
 import { Projects } from "@/sections/Projects";
+import { ProjectsGrid } from "@/sections/ProjectsGrid";
 
 const HomePage: FC = () => {
     return (
@@ -14,6 +15,7 @@ const HomePage: FC = () => {
             <Experience />
             <Skills />
             <Projects />
+            <ProjectsGrid />
         </Layout>
     );
 };

@@ -4,7 +4,7 @@ import { ProjectItem } from "@/components/ProjectItem";
 
 const Projects: FC = () => {
     return (
-        <section id="projects" className="mt-10">
+        <section id="projects" className="mt-10 pt-20">
             <Heading>Things I have built</Heading>
             <p className="mt-8 text-gray-400 text-base md:text-lg">
                 Here are some of the Projects I have worked on
