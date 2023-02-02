@@ -1,17 +1,20 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { FC } from "react";
+import { useRouter } from "next/router";
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import Map, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useForm, ValidationError } from "@formspree/react";
 import { Heading } from "@/components/Heading";
 
 const Contact: FC = () => {
+    const router = useRouter();
     const [state, handleSubmit] = useForm(
         process.env.NEXT_PUBLIC_FORMSPREE_API_KEY || ""
     );
+
     if (state.succeeded) {
-        // Redirect to success page
-        return <p>Thanks for joining!</p>;
+        router.push("/formsubmit");
     }
 
     return (
@@ -22,7 +25,19 @@ const Contact: FC = () => {
                 If you have some exciting project in mind, or just want to chat,
                 get in touch with me here...
             </p>
-            {/* TODO: add pjone and email */}
+            <p className="text-gray-400 text-lg mt-4">Contact Information</p>
+            <p className="flex items-center text-gray-400 text-lg gap-4 mt-4">
+                <span className="flex gap-2 items-center text-gray font-bold text-lg text-blue-500">
+                    <FaWhatsapp /> Phone:
+                </span>
+                +916294716288
+            </p>
+            <p className="flex items-center text-gray-400 text-lg gap-4">
+                <span className="flex gap-2 items-center text-gray font-bold text-lg text-blue-500">
+                    <FaEnvelope /> Email:
+                </span>
+                indranilhalder.dev@gmail.com
+            </p>
             <div className="relative flex items-center justify-between flex-col md:flex-row gap-6 mt-10">
                 <div className="w-full relative flex-1">
                     <Map

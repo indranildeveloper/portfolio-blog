@@ -28,7 +28,7 @@ const socials = [
 const Socials: FC = () => {
     return (
         <div className="fixed hidden lg:block top-1/2 left-4">
-            <div className="rotate-90 flex items-center gap-x-6 justify-center">
+            <div className="rotate-90 flex items-center gap-x-8 justify-center">
                 {socials.map((socialLink) => (
                     <a
                         key={socialLink.id}
