@@ -2,10 +2,18 @@
 import { FC } from "react";
 import Map, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { useForm, ValidationError } from "@formspree/react";
 import { Heading } from "@/components/Heading";
-import { Button } from "@/components/Button";
 
 const Contact: FC = () => {
+    const [state, handleSubmit] = useForm(
+        process.env.NEXT_PUBLIC_FORMSPREE_API_KEY || ""
+    );
+    if (state.succeeded) {
+        // Redirect to success page
+        return <p>Thanks for joining!</p>;
+    }
+
     return (
         <section id="contact" className="mt-10 pt-20">
             <Heading>Get In Touch</Heading>
@@ -14,7 +22,7 @@ const Contact: FC = () => {
                 If you have some exciting project in mind, or just want to chat,
                 get in touch with me here...
             </p>
-
+            {/* TODO: add pjone and email */}
             <div className="relative flex items-center justify-between flex-col md:flex-row gap-6 mt-10">
                 <div className="w-full relative flex-1">
                     <Map
@@ -33,10 +41,7 @@ const Contact: FC = () => {
                     </Map>
                 </div>
                 <div className="flex-1 w-full mt-10 md:mt-0">
-                    <form
-                        action="https://formspree.io/f/xvonzlab"
-                        method="POST"
-                    >
+                    <form onSubmit={handleSubmit}>
                         <h2 className="text-2xl ">Contact Me</h2>
                         <div className="relative mt-8">
                             <input
@@ -53,6 +58,11 @@ const Contact: FC = () => {
                             >
                                 Full name
                             </label>
+                            <ValidationError
+                                prefix="Full Name"
+                                field="fullName"
+                                errors={state.errors}
+                            />
                         </div>
                         <div className="relative mt-8">
                             <input
@@ -69,6 +79,11 @@ const Contact: FC = () => {
                             >
                                 Email Address
                             </label>
+                            <ValidationError
+                                prefix="Email"
+                                field="email"
+                                errors={state.errors}
+                            />
                         </div>
                         <div className="relative mt-8">
                             <textarea
@@ -85,11 +100,20 @@ const Contact: FC = () => {
                             >
                                 Your Message
                             </label>
+                            <ValidationError
+                                prefix="Message"
+                                field="message"
+                                errors={state.errors}
+                            />
                         </div>
                         <div className="mt-4">
-                            <Button link="#" submit>
+                            <button
+                                className="border-2 border-blue-500 px-10 py-2 md:px-16 md:py-3 text-base md:text-lg rounded-md text-blue-500 transition-all duration-300 hover:bg-blue-500 hover:bg-opacity-10"
+                                type="submit"
+                                disabled={state.submitting}
+                            >
                                 Send Message
-                            </Button>
+                            </button>
                         </div>
                     </form>
                 </div>
