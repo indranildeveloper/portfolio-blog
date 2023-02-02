@@ -1,5 +1,7 @@
 import { FC } from "react";
 import { Layout } from "@/components/Layout";
+import { Email } from "@/components/Email";
+import { Socials } from "@/components/Socials";
 import { Hero } from "@/sections/Hero";
 import { About } from "@/sections/About";
 import { Experience } from "@/sections/Experience";
@@ -11,6 +13,8 @@ import { Contact } from "@/sections/Contact";
 const HomePage: FC = () => {
     return (
         <Layout>
+            <Email />
+            <Socials />
             <Hero />
             <About />
             <Experience />

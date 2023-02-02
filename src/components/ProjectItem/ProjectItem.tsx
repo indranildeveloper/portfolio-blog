@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { FC } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 

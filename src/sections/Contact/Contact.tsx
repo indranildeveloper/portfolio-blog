@@ -34,7 +34,7 @@ const Contact: FC = () => {
                             latitude: 22.5726,
                             zoom: 6,
                         }}
-                        style={{ width: "100%", height: 500 }}
+                        style={{ width: "100%", height: 500, borderRadius: 6 }}
                         mapStyle="mapbox://styles/mapbox/streets-v9"
                     >
                         <Marker longitude={88.3639} latitude={22.5726} />
