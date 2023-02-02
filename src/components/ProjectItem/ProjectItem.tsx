@@ -7,8 +7,12 @@ interface ProjectItemProps {
 
 const ProjectItem: FC<ProjectItemProps> = ({ right }) => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 items-center gap-4 p-8 rounded-md bg-gray-800 mb-8 shadow-xl">
-            <div className={`${right && "text-right"}`}>
+        <div
+            className={`flex justify-between items-center flex-col-reverse ${
+                right ? "md:flex-row" : "md:flex-row-reverse"
+            }  gap-8 p-8 rounded-md bg-gray-800 mb-8 shadow-xl`}
+        >
+            <div className={`${right && "text-right"} flex-1`}>
                 <p className="text-sm md:text-base text-blue-500">
                     Featured Project
                 </p>
@@ -56,11 +60,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ right }) => {
                 </div>
             </div>
 
-            <div
-                className={`row-start-1 md:row-start-auto ${
-                    right && "md:row-start-1"
-                }`}
-            >
+            <div className="flex-1">
                 <img
                     className="rounded-md"
                     src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg"

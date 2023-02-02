@@ -29,11 +29,11 @@ export const navLinks = [
         title: "projects",
         link: "#projects",
     },
-    {
-        id: uuidv4(),
-        title: "blog",
-        link: "#blog",
-    },
+    // {
+    //     id: uuidv4(),
+    //     title: "blog",
+    //     link: "#blog",
+    // },
     {
         id: uuidv4(),
         title: "contact",

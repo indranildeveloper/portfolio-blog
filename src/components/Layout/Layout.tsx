@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react";
 import Head from "next/head";
 import { Navbar } from "../Navbar";
+import { Footer } from "../Footer";
 
 interface LayoutProps {
     children: ReactNode;
@@ -18,6 +19,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
                 <main className="container max-w-4xl mx-auto py-8 px-8 md:px-0">
                     {children}
                 </main>
+                <Footer />
             </div>
         </>
     );
