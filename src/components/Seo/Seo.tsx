@@ -13,8 +13,6 @@ const seo = {
 const Seo: FC = () => {
     return (
         <Head>
-            <html lang="en" />
-
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
 
@@ -29,6 +27,9 @@ const Seo: FC = () => {
             <meta name="twitter:title" content={seo.title} />
             <meta name="twitter:description" content={seo.description} />
             <meta name="twitter:image" content={seo.image} />
+
+            <link rel="icon" href="/logo.png" type="image/x-icon" />
+            <title>{seo.title}</title>
         </Head>
     );
 };
