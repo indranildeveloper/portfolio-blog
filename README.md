@@ -1,7 +1,7 @@
 # Portfolio Website
 ## Portfolio website of Indranil Halder
 
-![Screenshot Image](./screenshot/dcreenshot.png)
+![Screenshot Image](./screenshot/screenshot.png)
 
 
 # Credits
