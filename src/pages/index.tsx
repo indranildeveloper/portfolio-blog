@@ -11,19 +11,19 @@ import { ProjectsGrid } from "@/sections/ProjectsGrid";
 import { Contact } from "@/sections/Contact";
 
 const HomePage: FC = () => {
-    return (
-        <Layout>
-            <Email />
-            <Socials />
-            <Hero />
-            <About />
-            <Experience />
-            <Skills />
-            <Projects />
-            <ProjectsGrid />
-            <Contact />
-        </Layout>
-    );
+  return (
+    <Layout>
+      <Email />
+      <Socials />
+      <Hero />
+      <About />
+      <Experience />
+      <Skills />
+      <Projects />
+      <ProjectsGrid />
+      <Contact />
+    </Layout>
+  );
 };
 
 export default HomePage;
