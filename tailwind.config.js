@@ -6,7 +6,7 @@ module.exports = {
       colors: {},
       fontFamily: {
         primary: ["Poppins", "sans-serif"],
-        secondary: ["Lora", "serif"],
+        secondary: ["Fira Code", "monospace"],
       },
     },
   },

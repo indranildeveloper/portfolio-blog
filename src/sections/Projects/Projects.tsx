@@ -1,6 +1,8 @@
 import { FC } from "react";
+// import { v4 as uuidv4 } from "uuid";
 import { Heading } from "@/components/Heading";
 import { ProjectItem } from "@/components/ProjectItem";
+// import { projects } from "@/data";
 
 const Projects: FC = () => {
   return (

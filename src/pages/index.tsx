@@ -8,6 +8,7 @@ import { Experience } from "@/sections/Experience";
 import { Skills } from "@/sections/Skills";
 import { Projects } from "@/sections/Projects";
 import { ProjectsGrid } from "@/sections/ProjectsGrid";
+import { Timeline } from "@/sections/Timeline";
 import { Contact } from "@/sections/Contact";
 
 const HomePage: FC = () => {
@@ -21,6 +22,7 @@ const HomePage: FC = () => {
       <Skills />
       <Projects />
       <ProjectsGrid />
+      <Timeline />
       <Contact />
     </Layout>
   );

@@ -6,7 +6,7 @@ const Email: FC = () => {
       <div className="rotate-90 flex items-center justify-center">
         <a
           href="mailto:indranilhalder.dev@gmail.com"
-          className="text-gray-400 text-xl transition-all duration-300 hover:text-blue-500"
+          className="text-gray-400 text-lg font-secondary transition-all duration-300 hover:text-blue-500"
         >
           indranilhalder.dev@gmail.com
         </a>

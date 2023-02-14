@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Typewriter from "typewriter-effect";
 import { Button } from "@/components/Button";
 
 const Hero: FC = () => {
@@ -12,6 +13,20 @@ const Hero: FC = () => {
             I build awesome Web Experiences.
           </h1>
         </div>
+
+        <div className="mb-6 text-lg md:text-2xl font-secondary text-blue-500">
+          <Typewriter
+            options={{
+              strings: [
+                "I build Single Page Applications",
+                "I build Full Stack Web Applications",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </div>
+
         <p className="text-base md:text-lg text-gray-400 max-w-2xl">
           MERN Stack developer JavaScript enthusiast who has a predilection for
           design and enjoy working on projects where approaching design and
