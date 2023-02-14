@@ -1,8 +1,8 @@
 import { FC } from "react";
-// import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import { Heading } from "@/components/Heading";
 import { ProjectItem } from "@/components/ProjectItem";
-// import { projects } from "@/data";
+import { projects } from "@/data";
 
 const Projects: FC = () => {
   return (
@@ -13,10 +13,9 @@ const Projects: FC = () => {
           Here are some of the Projects I have worked on
         </p>
         <div className="mt-10">
-          <ProjectItem />
-          <ProjectItem right />
-          <ProjectItem />
-          <ProjectItem right />
+          {projects.map((project) => (
+            <ProjectItem key={uuidv4()} project={project} />
+          ))}
         </div>
       </div>
     </section>

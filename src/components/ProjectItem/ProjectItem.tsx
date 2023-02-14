@@ -1,51 +1,51 @@
-/* eslint-disable @next/next/no-img-element */
 import { FC } from "react";
+import Image from "next/image";
+import { v4 as uuidv4 } from "uuid";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { ProjectsType } from "@/data/projects";
 
 interface ProjectItemProps {
-  right?: boolean;
+  project: ProjectsType;
 }
 
-const ProjectItem: FC<ProjectItemProps> = ({ right }) => {
+const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
   return (
     <div
       className={`flex justify-between items-center flex-col-reverse ${
-        right ? "lg:flex-row" : "lg:flex-row-reverse"
+        project.flipped ? "lg:flex-row" : "lg:flex-row-reverse"
       }  gap-8 p-8 rounded-md bg-gray-800 mb-8 shadow-xl`}
     >
-      <div className={`text-left ${right && "lg:text-right"} flex-1`}>
+      <div className={`text-left ${project.flipped && "lg:text-right"} flex-1`}>
         <p className="text-sm lg:text-base text-blue-500">Featured Project</p>
-        <h2 className="text-2xl font-bold my-2">MERN ECommerce Web App</h2>
+        <h2 className="text-2xl font-bold my-2">{project.title}</h2>
         <p className="text-base lg:text-lg text-gray-400">
-          Description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Officiis voluptate corrupti atque! Harum, provident. Cupiditate
-          inventore, eaque adipisci modi dicta consectetur error quod a
-          quibusdam quisquam quaerat provident maiores natus?
+          {project.description}
         </p>
         <ul
           className={`flex items-center gap-4 flex-wrap my-4 justify-start ${
-            right && "lg:justify-end"
+            project.flipped && "lg:justify-end"
           }`}
         >
-          <li className="px-3 py-1 rounded-md bg-blue-600">React</li>
-          <li className="px-3 py-1 rounded-md bg-blue-600">NodeJS</li>
-          <li className="px-3 py-1 rounded-md bg-blue-600">Express</li>
-          <li className="px-3 py-1 rounded-md bg-blue-600">NodeJS</li>
+          {project.technologies.map((tech) => (
+            <li key={uuidv4()} className="px-3 py-1 rounded-md bg-blue-600">
+              {tech}
+            </li>
+          ))}
         </ul>
 
         <div
           className={`links flex gap-6 mt-6 justify-start ${
-            right && "lg:justify-end"
+            project.flipped && "lg:justify-end"
           }`}
         >
           <a
-            href="#a"
+            href={project.githubLink}
             className="text-2xl block transition-all duration-300 text-gray-400 hover:text-blue-500"
           >
             <FiGithub />
           </a>
           <a
-            href="#a"
+            href={project.liveLink}
             className="text-2xl block transition-all duration-300 text-gray-400 hover:text-blue-500"
           >
             <FiExternalLink />
@@ -54,18 +54,16 @@ const ProjectItem: FC<ProjectItemProps> = ({ right }) => {
       </div>
 
       <div className="flex-1">
-        <img
+        <Image
           className="rounded-md"
-          src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg"
-          alt="Project Showcase"
+          src={project.image}
+          alt={project.title}
+          width={1280}
+          height={800}
         />
       </div>
     </div>
   );
-};
-
-ProjectItem.defaultProps = {
-  right: false,
 };
 
 export default ProjectItem;
