@@ -16,7 +16,7 @@ const Navbar: FC = () => {
   }, []);
 
   return (
-    <header className="shadow-xl px-4 md:px-0">
+    <header className="shadow-xl px-8">
       <nav className="flex h-24 justify-between items-center container mx-auto">
         <div>
           <Link href="/">

@@ -8,23 +8,9 @@
   scroll-behavior: smooth;
 }
 
-body {
-  @apply absolute top-0 left-0 bottom-0 right-0;
-}
-
 section {
   @apply min-h-[80vh];
 }
-
-.vertical-timeline.vertical-timeline--two-columns {
-  width: 100% !important;
-}
-
-/* .vertical-timeline--two-columns
-    .vertical-timeline-element-content
-    .vertical-timeline-element-date {
-    margin: 0rem 0.6rem;
-} */
 
 /* width */
 ::-webkit-scrollbar {

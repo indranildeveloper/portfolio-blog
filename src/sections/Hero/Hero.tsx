@@ -5,11 +5,13 @@ import { Button } from "@/components/Button";
 const Hero: FC = () => {
   return (
     <section id="hero" className="flex flex-col justify-center mb-10">
-      <div>
+      <div className="md:px-24 xl:px-0">
         <div className="flex flex-col gap-4 mb-10">
           <p className="text-blue-500 text-lg">Hello, my name is</p>
-          <h1 className="text-5xl md:text-6xl font-bold">Indranil Halder</h1>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-400">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+            Indranil Halder
+          </h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-400">
             I build awesome Web Experiences.
           </h1>
         </div>

@@ -10,13 +10,13 @@ const ProjectItem: FC<ProjectItemProps> = ({ right }) => {
   return (
     <div
       className={`flex justify-between items-center flex-col-reverse ${
-        right ? "md:flex-row" : "md:flex-row-reverse"
+        right ? "lg:flex-row" : "lg:flex-row-reverse"
       }  gap-8 p-8 rounded-md bg-gray-800 mb-8 shadow-xl`}
     >
-      <div className={`text-left ${right && "md:text-right"} flex-1`}>
-        <p className="text-sm md:text-base text-blue-500">Featured Project</p>
+      <div className={`text-left ${right && "lg:text-right"} flex-1`}>
+        <p className="text-sm lg:text-base text-blue-500">Featured Project</p>
         <h2 className="text-2xl font-bold my-2">MERN ECommerce Web App</h2>
-        <p className="text-base md:text-lg text-gray-400">
+        <p className="text-base lg:text-lg text-gray-400">
           Description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Officiis voluptate corrupti atque! Harum, provident. Cupiditate
           inventore, eaque adipisci modi dicta consectetur error quod a
@@ -24,7 +24,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ right }) => {
         </p>
         <ul
           className={`flex items-center gap-4 flex-wrap my-4 justify-start ${
-            right && "md:justify-end"
+            right && "lg:justify-end"
           }`}
         >
           <li className="px-3 py-1 rounded-md bg-blue-600">React</li>
@@ -35,7 +35,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ right }) => {
 
         <div
           className={`links flex gap-6 mt-6 justify-start ${
-            right && "md:justify-end"
+            right && "lg:justify-end"
           }`}
         >
           <a
