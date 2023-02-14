@@ -1,27 +1,27 @@
 import { FC } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FiGithub, FiLinkedin, FiInstagram, FiTwitter } from "react-icons/fi";
 
 const socials = [
   {
     id: uuidv4(),
     link: "https://github.com/indranildeveloper",
-    icon: <FaGithub />,
+    icon: <FiGithub />,
   },
   {
     id: uuidv4(),
     link: "https://www.linkedin.com/in/indranildeveloper/",
-    icon: <FaLinkedin />,
+    icon: <FiLinkedin />,
   },
   {
     id: uuidv4(),
     link: "https://www.instagram.com/",
-    icon: <FaInstagram />,
+    icon: <FiInstagram />,
   },
   {
     id: uuidv4(),
     link: "https://twitter.com/indranilcoder",
-    icon: <FaTwitter />,
+    icon: <FiTwitter />,
   },
 ];
 

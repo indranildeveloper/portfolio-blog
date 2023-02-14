@@ -41,12 +41,16 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
           <a
             href={project.githubLink}
             className="text-2xl block transition-all duration-300 text-gray-400 hover:text-blue-500"
+            target="_blank"
+            rel="noreferrer noopener"
           >
             <FiGithub />
           </a>
           <a
             href={project.liveLink}
             className="text-2xl block transition-all duration-300 text-gray-400 hover:text-blue-500"
+            target="_blank"
+            rel="noreferrer noopener"
           >
             <FiExternalLink />
           </a>

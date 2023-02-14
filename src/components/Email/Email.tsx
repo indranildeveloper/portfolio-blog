@@ -7,6 +7,8 @@ const Email: FC = () => {
         <a
           href="mailto:indranilhalder.dev@gmail.com"
           className="text-gray-400 text-base font-secondary transition-all duration-300 hover:text-blue-500"
+          target="_blank"
+          rel="noreferrer noopener"
         >
           indranilhalder.dev@gmail.com
         </a>

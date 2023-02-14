@@ -29,7 +29,10 @@ const Navbar: FC = () => {
         <ul className="hidden md:flex items-center gap-6">
           {navLinks.map((navLink) => (
             <li key={navLink.id}>
-              <a className="capitalize text-lg" href={navLink.link}>
+              <a
+                className="capitalize text-lg transition-all duration-300 hover:text-blue-500"
+                href={navLink.link}
+              >
                 {navLink.title}
               </a>
             </li>

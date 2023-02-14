@@ -34,6 +34,18 @@ const skillItems: Array<SkillItemType> = [
   },
   {
     id: uuidv4(),
+    icon: <SiRedux />,
+  },
+  {
+    id: uuidv4(),
+    icon: <SiJavascript />,
+  },
+  {
+    id: uuidv4(),
+    icon: <SiTypescript />,
+  },
+  {
+    id: uuidv4(),
     icon: <FaNodeJs />,
   },
   {
@@ -46,11 +58,19 @@ const skillItems: Array<SkillItemType> = [
   },
   {
     id: uuidv4(),
-    icon: <SiVisualstudiocode />,
+    icon: <SiGraphql />,
   },
   {
     id: uuidv4(),
     icon: <SiApollographql />,
+  },
+  {
+    id: uuidv4(),
+    icon: <SiTailwindcss />,
+  },
+  {
+    id: uuidv4(),
+    icon: <SiBootstrap />,
   },
   {
     id: uuidv4(),
@@ -70,7 +90,7 @@ const skillItems: Array<SkillItemType> = [
   },
   {
     id: uuidv4(),
-    icon: <SiRedux />,
+    icon: <SiVisualstudiocode />,
   },
   {
     id: uuidv4(),
@@ -82,14 +102,6 @@ const skillItems: Array<SkillItemType> = [
   },
   {
     id: uuidv4(),
-    icon: <SiJavascript />,
-  },
-  {
-    id: uuidv4(),
-    icon: <SiTypescript />,
-  },
-  {
-    id: uuidv4(),
     icon: <SiHtml5 />,
   },
   {
@@ -98,19 +110,7 @@ const skillItems: Array<SkillItemType> = [
   },
   {
     id: uuidv4(),
-    icon: <SiTailwindcss />,
-  },
-  {
-    id: uuidv4(),
-    icon: <SiBootstrap />,
-  },
-  {
-    id: uuidv4(),
     icon: <SiFirebase />,
-  },
-  {
-    id: uuidv4(),
-    icon: <SiGraphql />,
   },
 ];
 
@@ -123,7 +123,7 @@ const Skills: FC = () => {
           Here are the technologies I have worked with:
         </p>
 
-        <div className="mt-8 grid grid-cols-4 md:grid-cols-6 gap-8">
+        <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 md:grid-cols-4 lg:grid-cols-6 md:gap-8">
           {skillItems.map((skillItem) => (
             <div
               key={skillItem.id}
