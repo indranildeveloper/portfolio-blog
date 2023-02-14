@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import { Heading } from "@/components/Heading";
+import { Link } from "@/components/Link";
 
 const About: FC = () => {
   return (
@@ -28,7 +29,8 @@ const About: FC = () => {
             <p className="text-base md:text-lg text-gray-400">
               Fast forward to today I have worked on several technologies and I
               have built several projects. Currently I am working as the
-              Frontend Developer at Private AI.
+              Frontend Developer at{" "}
+              <Link href="https://www.private-ai.com">Private AI</Link>.
             </p>
           </div>
 

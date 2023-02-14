@@ -3,7 +3,7 @@ import { FiFolder, FiGithub, FiExternalLink } from "react-icons/fi";
 
 const ProjectCard: FC = () => {
   return (
-    <div className="bg-gray-800 p-6 rounded-md shadow-xl">
+    <div className="bg-gray-800 p-6 rounded-md shadow-xl transition-all duration-300 hover:-translate-y-2">
       <div className="flex justify-between items-center">
         <div className="text-4xl text-blue-500">
           <FiFolder />

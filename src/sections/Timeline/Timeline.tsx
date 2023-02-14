@@ -5,7 +5,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { Heading } from "@/components/Heading";
-import { experiences } from "@/data";
+import { timelineData } from "@/data";
 
 const Timeline: FC = () => {
   return (
@@ -24,7 +24,7 @@ const Timeline: FC = () => {
 
           <div className="mt-8">
             <VerticalTimeline>
-              {experiences.map((item) => (
+              {timelineData.map((item) => (
                 <VerticalTimelineElement
                   className="vertical-timeline-element--work "
                   contentStyle={{

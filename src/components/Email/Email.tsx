@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const Email: FC = () => {
   return (
-    <div className="fixed hidden lg:block top-1/2 -right-4">
+    <div className="fixed hidden lg:block top-1/2 -right-4 transition-all duration-300 hover:-translate-y-2">
       <div className="rotate-90 flex items-center justify-center">
         <a
           href="mailto:indranilhalder.dev@gmail.com"

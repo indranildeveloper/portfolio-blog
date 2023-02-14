@@ -1,7 +1,21 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
-const Link: FC = () => {
-  return <div>Link</div>;
+interface LinkProps {
+  children: ReactNode;
+  href: string;
+}
+
+const Link: FC<LinkProps> = ({ children, href }) => {
+  return (
+    <a
+      href={href}
+      className="text-blue-500 transition-all duration-300 hover:underline"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {children}
+    </a>
+  );
 };
 
 export default Link;
