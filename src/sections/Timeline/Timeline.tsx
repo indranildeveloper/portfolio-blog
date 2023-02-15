@@ -29,7 +29,7 @@ const Timeline: FC = () => {
                   className="vertical-timeline-element--work "
                   contentStyle={{
                     background: "#1e293b",
-                    color: "#ffffff",
+                    color: "#9ca3af",
                   }}
                   contentArrowStyle={{
                     borderRight: "7px solid  #1e293b",

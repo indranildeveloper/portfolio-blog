@@ -76,4 +76,36 @@ export const projects = [
     technologies: ["React", "TypeScript", "BulmaCSS", "ESBuild"],
     flipped: true,
   },
+  {
+    id: uuidv4(),
+    title: "Support Desk",
+    description:
+      "Full Stack Web Application for a Managing the issues of products with Authentication System. Create, Read, Update and Delete Functionality of Tickets Regarding the Products. We can have separate notes which are associated with every ticket. Also we can change the status of the ticket as well. So It is the issue management system for the Company.",
+    featured: true,
+    githubLink: "https://github.com/indranildeveloper/support-desk",
+    liveLink: "https://support-desk-2h7k.onrender.com/",
+    image: "/projects/supportdesk.png",
+    technologies: [
+      "React",
+      "Redux",
+      "NodeJS",
+      "MongoDB",
+      "Express",
+      "Bootstrap",
+      "React Bootstrap",
+    ],
+    flipped: false,
+  },
+  {
+    id: uuidv4(),
+    title: "DevSpace Blog",
+    description:
+      "A Simple Markdown Blog. Where we can write content with markdown and when a new markdown file is created then according to the name a new dynamic path and new page is being created. We have certain filters with the tags and also we have search functionality. Apart from that the search results are being cached to increase the speed of the search.",
+    featured: true,
+    githubLink: "https://github.com/indranildeveloper/devspace",
+    liveLink: "https://devspace-iota.vercel.app/",
+    image: "/projects/devspace.png",
+    technologies: ["React", "NextJS", "Markdown", "Tailwind CSS", "Husky"],
+    flipped: true,
+  },
 ];

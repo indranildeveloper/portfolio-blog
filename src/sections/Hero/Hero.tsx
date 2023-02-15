@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Typewriter from "typewriter-effect";
+import Typed from "react-typed";
 import { Button } from "@/components/Button";
 
 const Hero: FC = () => {
@@ -16,16 +16,16 @@ const Hero: FC = () => {
           </h1>
         </div>
 
-        <div className="mb-6 text-lg md:text-2xl font-secondary text-blue-500">
-          <Typewriter
-            options={{
-              strings: [
-                "I build Single Page Applications",
-                "I build Full Stack Web Applications",
-              ],
-              autoStart: true,
-              loop: true,
-            }}
+        <div className="mb-6">
+          <Typed
+            strings={[
+              "I build Single Page Applications",
+              "I build Full Stack Applications",
+              "I build Awesome Experiences",
+            ]}
+            typeSpeed={40}
+            loop
+            className="font-secondary text-blue-500 text-2xl"
           />
         </div>
 
