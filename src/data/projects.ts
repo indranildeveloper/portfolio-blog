@@ -121,6 +121,22 @@ export const projects = [
 export const extraProjects: Array<ExtraProjectsType> = [
   {
     id: uuidv4(),
+    title: "Memories",
+    description: "A Full Stack Social Media Application with image upload.",
+    githubLink: "https://github.com/indranildeveloper/mern-memories-app",
+    liveLink: "https://github.com/indranildeveloper/mern-memories-app",
+    technologies: ["React", "Redux", "Material UI", "NodeJS", "MongoDB"],
+  },
+  {
+    id: uuidv4(),
+    title: "Codepen Clone",
+    description: "Code Editor like Codepen with live preview.",
+    githubLink: "https://github.com/indranildeveloper/react-codepen-clone",
+    liveLink: "https://react-codepen-clone-indranildeveloper.netlify.app/",
+    technologies: ["React", "CodeMirror"],
+  },
+  {
+    id: uuidv4(),
     title: "Github Finder",
     description:
       "A web application to find and see the data from the github profile.",

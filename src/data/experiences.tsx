@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 export interface ExperienceType {
   id: string;
   title: string;
+  date: string;
   company: string;
   description: string;
   tasks: Array<string>;
@@ -12,6 +13,7 @@ export const experiences: Array<ExperienceType> = [
   {
     id: uuidv4(),
     title: "Frontend Developer",
+    date: "06/2022 - Present",
     company: "Private AI",
     description:
       "Detect, Anonymize, & Replace Personally Identifiable Information With Better Accuracy Than Big Tech.",
@@ -25,6 +27,7 @@ export const experiences: Array<ExperienceType> = [
   {
     id: uuidv4(),
     title: "Full Stack Developer",
+    date: "10/2021 - Present",
     company: "Coder's Gyan",
     description: "Learn Programming by Building the stuff.",
     tasks: [

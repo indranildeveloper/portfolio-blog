@@ -20,12 +20,11 @@ interface TimelineProps {
 export const timelineData: Array<TimelineProps> = [
   {
     id: uuidv4(),
-    date: "2021 - Current",
+    date: "2022 - Current",
     icon: <FaChartLine />,
     title: "Going On",
-    location: "University of Gour Banga, Malda",
-    description:
-      "Started Master's Degree in Physics, learning everyday new things and finding an exciting opportunity.",
+    location: "Remote Job",
+    description: "Joined a Canadian Startup as a Remote Frontend Developer.",
   },
   {
     id: uuidv4(),
