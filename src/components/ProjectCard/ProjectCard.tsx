@@ -1,7 +1,13 @@
 import { FC } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { FiFolder, FiGithub, FiExternalLink } from "react-icons/fi";
+import { ExtraProjectsType } from "@/data";
 
-const ProjectCard: FC = () => {
+interface ProjectCardType {
+  project: ExtraProjectsType;
+}
+
+const ProjectCard: FC<ProjectCardType> = ({ project }) => {
   return (
     <div className="bg-gray-800 p-6 rounded-md shadow-xl transition-all duration-300 hover:-translate-y-2">
       <div className="flex justify-between items-center">
@@ -10,14 +16,16 @@ const ProjectCard: FC = () => {
         </div>
         <div className="flex gap-4 items-center">
           <a
-            href="#a"
+            href={project.githubLink}
             className="text-2xl text-gray-400 transition-all duration-300 hover:text-blue-500"
+            rel="noopener noreferrer"
           >
             <FiGithub />
           </a>
           <a
-            href="#a"
+            href={project.liveLink}
             className="text-2xl text-gray-400 transition-all duration-300 hover:text-blue-500"
+            rel="noopener noreferrer"
           >
             <FiExternalLink />
           </a>
@@ -25,21 +33,19 @@ const ProjectCard: FC = () => {
       </div>
 
       <div>
-        <a href="#a">
+        <a href={project.liveLink} rel="noopener noreferrer">
           <h2 className="my-4 text-2xl text-gray-400 font-bold transition-all duration-300 hover:text-blue-500">
-            Project Name
+            {project.title}
           </h2>
         </a>
         <p className="text-sm md:text-base text-gray-400">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-          quae autem, beatae repellendus distinctio
+          {project.description}
         </p>
 
         <ul className="flex flex-wrap gap-x-4 gap-y-2 mt-4 text-gray-400">
-          <li>React</li>
-          <li>NodeJS</li>
-          <li>Redux</li>
-          <li>MongoDB</li>
+          {project.technologies.map((tech) => (
+            <li key={uuidv4()}>{tech}</li>
+          ))}
         </ul>
       </div>
     </div>

@@ -11,6 +11,14 @@ export interface ProjectsType {
   technologies: Array<string>;
   flipped?: boolean;
 }
+export interface ExtraProjectsType {
+  id: string;
+  title: string;
+  description: string;
+  githubLink: string;
+  liveLink?: string;
+  technologies: Array<string>;
+}
 
 export const projects = [
   {
@@ -107,5 +115,41 @@ export const projects = [
     image: "/projects/devspace.png",
     technologies: ["React", "NextJS", "Markdown", "Tailwind CSS", "Husky"],
     flipped: true,
+  },
+];
+
+export const extraProjects: Array<ExtraProjectsType> = [
+  {
+    id: uuidv4(),
+    title: "Github Finder",
+    description:
+      "A web application to find and see the data from the github profile.",
+    githubLink: "https://github.com/indranildeveloper/github-finder-app",
+    liveLink: "https://github-finder-app-indranildeveloper.vercel.app/",
+    technologies: ["React", "Context API", "Tailwind CSS", "Daisy UI"],
+  },
+  {
+    id: uuidv4(),
+    title: "Portfolio Website",
+    description: "Portfolio website for developer.",
+    githubLink: "https://github.com/indranildeveloper/next-portfolio",
+    liveLink: "https://indranilhalder.vercel.app/",
+    technologies: ["NextJS", "Tailwind CSS", "Framer Motion"],
+  },
+  {
+    id: uuidv4(),
+    title: "Music Player",
+    description: "A Simple Music Player App",
+    githubLink: "https://github.com/indranildeveloper/js-music-player",
+    liveLink: "https://jsmusicplayer-indranildeveloper.netlify.app/",
+    technologies: ["JavaScript", "HTML5", "CSS3"],
+  },
+  {
+    id: uuidv4(),
+    title: "Portfolio Website",
+    description: "Portfolio website for developer with Strapi Backend.",
+    githubLink: "https://github.com/indranildeveloper/gatsby-portfolio",
+    liveLink: "https://gatsbyportfolio-indranildeveloper.netlify.app/",
+    technologies: ["GatsbyJS", "CSS", "Strapi"],
   },
 ];

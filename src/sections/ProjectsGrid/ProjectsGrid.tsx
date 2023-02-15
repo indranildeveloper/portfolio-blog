@@ -1,6 +1,8 @@
 import { FC } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Heading } from "@/components/Heading";
 import { ProjectCard } from "@/components/ProjectCard";
+import { extraProjects } from "@/data";
 
 const ProjectsGrid: FC = () => {
   return (
@@ -11,12 +13,9 @@ const ProjectsGrid: FC = () => {
           Here are some other projects which I have worked on
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {extraProjects.map((project) => (
+            <ProjectCard key={uuidv4()} project={project} />
+          ))}
         </div>
       </div>
     </section>
