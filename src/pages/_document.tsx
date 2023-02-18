@@ -5,8 +5,6 @@ const Document = () => {
     <Html lang="en">
       <Head />
       <body>
-        <Main />
-        <NextScript />
         {/* <!-- Google Tag Manager (noscript) --> */}
         <noscript
           // eslint-disable-next-line react/no-danger
@@ -16,6 +14,8 @@ const Document = () => {
           }}
         />
         {/* <!-- End Google Tag Manager (noscript) --> */}
+        <Main />
+        <NextScript />
       </body>
     </Html>
   );
