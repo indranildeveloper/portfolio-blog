@@ -58,4 +58,5 @@ const Timeline: FC = () => {
     </section>
   );
 };
+
 export default Timeline;
