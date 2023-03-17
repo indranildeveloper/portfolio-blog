@@ -48,4 +48,5 @@ const About: FC = () => {
     </section>
   );
 };
+
 export default About;

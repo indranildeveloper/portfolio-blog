@@ -25,4 +25,5 @@ const Skills: FC = () => {
     </div>
   );
 };
+
 export default Skills;

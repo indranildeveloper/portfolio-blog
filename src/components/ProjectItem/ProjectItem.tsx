@@ -11,19 +11,35 @@ interface ProjectItemProps {
 const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
   return (
     <div
-      className={`flex justify-between items-center flex-col-reverse ${
-        project.flipped ? "lg:flex-row" : "lg:flex-row-reverse"
-      }  gap-8 p-8 rounded-md bg-gray-800 mb-8 shadow-xl`}
+      className={`flex items-center justify-center md:justify-between my-20 md:my-10 rounded-md bg-gray-800 flex-col md:flex-row  ${
+        project.flipped && "md:flex-row-reverse"
+      }`}
     >
-      <div className={`text-left ${project.flipped && "lg:text-right"} flex-1`}>
+      <div className="">
+        <Image
+          className={`rounded-md md:w-[600px] max-w-[90%] shadow-lg -mt-10 md:-mt-0 mx-auto ${
+            project.flipped ? "md:ml-24" : "md:-ml-10"
+          }`}
+          src={project.image}
+          alt={project.title}
+          width={1280}
+          height={800}
+        />
+      </div>
+
+      <div
+        className={`max-w-[450px] py-8 px-6 md:px-0 ${
+          project.flipped ? "md:pl-10 md:text-right" : "md:pr-10"
+        }`}
+      >
         <p className="text-sm lg:text-base text-blue-500">Featured Project</p>
         <h2 className="text-2xl font-bold my-2">{project.title}</h2>
         <p className="text-base lg:text-lg text-gray-400">
           {project.description}
         </p>
         <ul
-          className={`flex items-center gap-4 flex-wrap my-4 justify-start ${
-            project.flipped && "lg:justify-end"
+          className={`flex items-center gap-4 flex-wrap my-4 ${
+            project.flipped ? "md:justify-end" : "md:justify-start"
           }`}
         >
           {project.technologies.map((tech) => (
@@ -34,8 +50,8 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
         </ul>
 
         <div
-          className={`links flex gap-6 mt-6 justify-start ${
-            project.flipped && "lg:justify-end"
+          className={`links flex gap-6 mt-6 ${
+            project.flipped ? "md:justify-end" : "md:justify-start"
           }`}
         >
           <a
@@ -55,16 +71,6 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
             <FiExternalLink />
           </a>
         </div>
-      </div>
-
-      <div className="flex-1">
-        <Image
-          className="rounded-md"
-          src={project.image}
-          alt={project.title}
-          width={1280}
-          height={800}
-        />
       </div>
     </div>
   );
