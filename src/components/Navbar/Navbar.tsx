@@ -1,5 +1,6 @@
 import { FC, useState, useEffect } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { FaTimes, FaBars, FaLaptopCode } from "react-icons/fa";
 import { navLinks } from "@/data";
 import { Sidebar } from "../Sidebar";
@@ -16,7 +17,11 @@ const Navbar: FC = () => {
   }, []);
 
   return (
-    <header className="shadow-xl px-8">
+    <motion.header
+      className="shadow-xl px-8"
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+    >
       <nav className="flex h-24 justify-between items-center container mx-auto">
         <div>
           <Link href="/">
@@ -28,14 +33,18 @@ const Navbar: FC = () => {
 
         <ul className="hidden md:flex items-center gap-6">
           {navLinks.map((navLink) => (
-            <li key={navLink.id}>
-              <a
+            <motion.li
+              key={navLink.id}
+              initial={{ x: -40 }}
+              animate={{ x: 20 }}
+            >
+              <motion.a
                 className="capitalize text-lg transition-all duration-300 hover:text-blue-500"
                 href={navLink.link}
               >
                 {navLink.title}
-              </a>
-            </li>
+              </motion.a>
+            </motion.li>
           ))}
         </ul>
 
@@ -49,7 +58,7 @@ const Navbar: FC = () => {
 
         {isOpen && <Sidebar />}
       </nav>
-    </header>
+    </motion.header>
   );
 };
 
